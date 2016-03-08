@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "fidStackDB": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "FidStackDB",
+    "name": "fidStackDB",
+    "connector": "mongodb"
+  }
+}

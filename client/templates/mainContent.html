@@ -1,0 +1,198 @@
+
+<!-- Main content -->
+<section class="content">
+  <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a data-target="#topRatedQn" data-toggle="tab" aria-expanded="false">Top Rated Questions</a></li>
+                    <li class=""><a data-target="#latestQuestions" data-toggle="tab" aria-expanded="false">Latest</a></li>
+                    <li class=""><a data-target="#ask-a-question" data-toggle="tab" aria-expanded="true">Ask a Question</a></li>
+
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="topRatedQn">
+                      <!-- Post -->
+                      <div class="box">
+
+                        <div class="box-body">
+                          <table id="questionsTbl" class="table table-bordered table-striped">
+                            <thead >
+                              <tr>
+                                <th>
+                                  <br>
+                                </th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="question in topRatedQuestions track by $index" my-post-repeat-directive>
+                                <td>
+                                  <div class="post">
+                                          <div class="user-block">
+                                            <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                                            <span class="username">
+                                              <a href="#/question/{{question.id}}">{{question.title}}</a>
+                                              <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                                            </span>
+                                            <span class="description">Jonathan</span>
+                                            <span class="description">Shared publicly - {{question.postedDate | date:'dd-MMM-yyyy'}}</span>
+                                          </div><!-- /.user-block -->
+                                          <p>
+                                            {{question.description}}
+                                          </p>
+                                          <ul class="list-inline">
+                                            <li>
+                                              <div star-rating rating="question.rating" read-only="true" max-rating="5">
+
+                                              </div>
+                                            </li>
+                                            <li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a></li>
+                                            <li class="pull-right"><a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments (5)</a></li>
+                                          </ul>
+                                  </div>
+
+                                </td>
+
+                              </tr>
+
+                            </tfoot>
+                          </table>
+                        </div><!-- /.box-body -->
+                      </div><!-- /.box -->
+
+                      <!-- Post -->
+                    </div><!-- /.tab-pane -->
+                    <div class="tab-pane" id="latestQuestions">
+                      <!-- The timeline -->
+                      <ul class="timeline timeline-inverse">
+                        <!-- timeline time label -->
+                        <li class="time-label">
+                          <span class="bg-red">
+                            10 Feb. 2014
+                          </span>
+                        </li>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-envelope bg-blue"></i>
+                          <div class="timeline-item">
+                            <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+                            <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+                            <div class="timeline-body">
+                              Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                              weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                              jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                              quora plaxo ideeli hulu weebly balihoo...
+                            </div>
+                            <div class="timeline-footer">
+                              <a class="btn btn-primary btn-xs">Read more</a>
+                              <a class="btn btn-danger btn-xs">Delete</a>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-user bg-aqua"></i>
+                          <div class="timeline-item">
+                            <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+                            <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-comments bg-yellow"></i>
+                          <div class="timeline-item">
+                            <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+                            <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                            <div class="timeline-body">
+                              Take me to your leader!
+                              Switzerland is small and neutral!
+                              We are more like Germany, ambitious and misunderstood!
+                            </div>
+                            <div class="timeline-footer">
+                              <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <!-- timeline time label -->
+                        <li class="time-label">
+                          <span class="bg-green">
+                            3 Jan. 2014
+                          </span>
+                        </li>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-camera bg-purple"></i>
+                          <div class="timeline-item">
+                            <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+                            <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+                            <div class="timeline-body">
+                              <img src="http://placehold.it/150x100" alt="..." class="margin">
+                              <img src="http://placehold.it/150x100" alt="..." class="margin">
+                              <img src="http://placehold.it/150x100" alt="..." class="margin">
+                              <img src="http://placehold.it/150x100" alt="..." class="margin">
+                            </div>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <li>
+                          <i class="fa fa-clock-o bg-gray"></i>
+                        </li>
+                      </ul>
+                    </div><!-- /.tab-pane -->
+
+                    <div class="tab-pane" id="ask-a-question">
+                      <section class="content">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="questionTitle" placeholder="Question Title"></input>
+                                <br>
+                                <textarea class="form-control" rows="2" placeholder="Description of your Question..."></textarea>
+                                <br>
+                                <select class="form-control select2" multiple="multiple" data-placeholder="Select Category" style="width: 100%;">
+                                  <option>technical</option>
+                                  <option>javascript</option>
+                                  <option>java</option>
+                                  <option>.net</option>
+                                  <option>monogo db</option>
+                                  <option>sql</option>
+                                  <option>mysql</option>
+                                </select>
+                             </div><!-- /.form-group -->
+
+                            <div class="box box-info">
+                              <div class="box-header">
+                                <h3 class="box-title">Format <small>Your Question</small></h3>
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+                                  <button class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                                  <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+                                </div><!-- /. tools -->
+                              </div><!-- /.box-header -->
+                              <div class="box-body pad">
+                                <form>
+                                  <textarea id="qnMainEditor" name="qnMainEditor" rows="10" cols="80">
+                                                          This is my textarea to be replaced with CKEditor.
+                                  </textarea>
+                                </form>
+                              </div>
+                            </div><!-- /.box -->
+                            <div class="modal-footer">
+
+                              <button type="button" class="btn btn-primary">Submit Question</button>
+                            </div>
+                          </div><!-- /.col-->
+                        </div><!-- ./row -->
+                      </section><!-- /.content -->
+
+                    </div><!-- /.tab-pane -->
+                  </div><!-- /.tab-content -->
+                </div><!-- /.nav-tabs-custom -->
+  </div>
+
+</section><!-- /.content -->
